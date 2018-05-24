@@ -256,7 +256,6 @@ open class SwiftyCamViewController: UIViewController {
 	override open func viewDidLoad() {
 		super.viewDidLoad()
         previewLayer = PreviewView(frame: view.frame, videoGravity: videoGravity)
-        previewLayer.center = view.center
         view.addSubview(previewLayer)
         view.sendSubview(toBack: previewLayer)
 
@@ -296,6 +295,8 @@ open class SwiftyCamViewController: UIViewController {
     // MARK: ViewDidLayoutSubviews
     
     /// ViewDidLayoutSubviews() Implementation
+    /// ViewDidLayoutSubviews() Implementation
+    
     private func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
         
         layer.videoOrientation = orientation
@@ -630,6 +631,7 @@ open class SwiftyCamViewController: UIViewController {
 	/// Configure image quality preset
 
 	fileprivate func configureVideoPreset() {
+
 		if currentCamera == .front {
 			session.sessionPreset = videoInputPresetFromVideoQuality(quality: .high)
 		} else {
@@ -1047,9 +1049,6 @@ extension SwiftyCamViewController : AVCaptureFileOutputRecordingDelegate {
 		}
 		if error != nil {
 			print("[SwiftyCam]: Movie file finishing error: \(error)")
-            DispatchQueue.main.async {
-                self.cameraDelegate?.swiftyCam(self, didFailToRecordVideo: error)
-            }
 		} else {
 			//Call delegate function with the URL of the outputfile
 			DispatchQueue.main.async {

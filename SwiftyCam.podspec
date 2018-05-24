@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyCam'
-  s.version          = '2.7.0'
+  s.version          = '2.6.0'
   s.summary          = 'A Simple, Snapchat inspired camera Framework written in Swift'
   s.ios.deployment_target = '8.0'
 
@@ -23,11 +23,11 @@ s.description      = <<-DESC
 A drop in Camera View Controller for capturing photos and videos from one AVSession. Written in Swift.
                      DESC
 
-  s.homepage         = 'https://github.com/Awalz/SwiftyCam'
+  s.homepage         = 'https://github.com/iMemon/SwiftyCam'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'BSD', :file => 'LICENSE' }
-  s.author           = { 'Andrew Walz' => 'andrewjwalz@gmail.com' }
-  s.source           = { :git => 'https://github.com/Awalz/SwiftyCam.git', :tag => s.version.to_s }
+  s.author           = { 'iMemon' => 'ayazahmed313@gmail.com' }
+  s.source           = { :git => 'https://github.com/iMemon/SwiftyCam.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
